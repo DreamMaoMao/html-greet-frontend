@@ -1,4 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+    --color-custombg1: #201B14;
+    --color-custombg2: #453b2d;
+    --color-custombg3: #605341;
+    --color-custombg4: #605341;
+    --color-cistomfg1: #D1C29D;
+  }
+
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;

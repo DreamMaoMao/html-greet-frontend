@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-gray-900 text-gray-100 overflow-hidden">
+    <div class="min-h-screen bg-custombg1 text-gray-100 overflow-hidden">
         <transition name="fade" mode="out-in">
             <router-view />
         </transition>
