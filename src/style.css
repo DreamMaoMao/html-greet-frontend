@@ -5,13 +5,12 @@
     --color-custombg2: #453b2d;
     --color-custombg3: #605341;
     --color-custombg4: #605341;
-    --color-cistomfg1: #D1C29D;
   }
 
 :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: HYLeMiaoTiJ,Maple Mono NF CN, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 600;
 
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
