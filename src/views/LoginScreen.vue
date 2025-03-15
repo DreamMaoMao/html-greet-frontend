@@ -1,18 +1,18 @@
 <template>
     <div
-        class="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-gray-100 p-4"
+        class="min-h-screen flex flex-col items-center justify-center bg-custombg1 text-gray-100 p-4"
         @keydown="handleKeydown"
         tabindex="0"
     >
         <PowerButtons />
-        <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <div class="w-full max-w-md bg-custombg2 rounded-lg shadow-lg overflow-hidden">
             <div class="p-8">
-                <h1 class="text-2xl font-bold text-center mb-6">Login</h1>
+                <h1 class="text-2xl font-bold text-center mb-6">Welcom!!</h1>
 
                 <!-- Avatar -->
                 <div class="flex justify-center mb-6">
                     <div
-                        class="w-24 h-24 rounded-full overflow-hidden bg-gray-700 flex items-center justify-center"
+                        class="w-24 h-24 rounded-full overflow-hidden bg-custombg1 flex items-center justify-center"
                     >
                         <img
                             v-if="selectedAvatar"
@@ -33,7 +33,7 @@
                         <select
                             id="username"
                             v-model="selectedUsername"
-                            class="w-full px-3 py-2 bg-gray-700 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                            class="w-full px-3 py-2 bg-custombg1 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
                             required
                             @change="fetchAvatar"
                         >
@@ -50,7 +50,7 @@
                         <select
                             id="session"
                             v-model="selectedSession"
-                            class="w-full px-3 py-2 bg-gray-700 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                            class="w-full px-3 py-2 bg-custombg1 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
                             required
                         >
                             <option value="" disabled>Select session</option>
@@ -74,7 +74,7 @@
                                 :type="showPassword ? 'text' : 'password'"
                                 id="password"
                                 v-model="password"
-                                class="w-full px-3 py-2 bg-gray-700 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 pr-10"
+                                class="w-full px-3 py-2 bg-custombg1 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500 pr-10"
                                 required
                                 ref="passwordInputRef"
                             />
@@ -92,7 +92,7 @@
                     <!-- Login Button -->
                     <button
                         type="submit"
-                        class="w-full py-2 px-4 !bg-teal-600 hover:!bg-teal-700 rounded-md transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:!ring-teal-500 focus:!ring-offset-gray-800"
+                        class="w-full py-2 px-4 !bg-orange-700 hover:!bg-orange-800 rounded-md transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:!ring-orange-500 focus:!ring-offset-gray-800"
                         :disabled="isLoading"
                     >
                         <span v-if="isLoading" class="flex items-center justify-center">
@@ -150,11 +150,6 @@
                         </div>
                     </div>
                 </form>
-
-                <!-- Footer -->
-                <div class="px-8 py-4 bg-gray-900 text-center text-xs text-gray-500">
-                    Linux Display Manager
-                </div>
             </div>
         </div>
     </div>

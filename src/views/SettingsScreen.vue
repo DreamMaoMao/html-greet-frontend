@@ -1,18 +1,18 @@
 <template>
-    <div class="min-h-screen flex flex-col bg-gray-900 text-gray-100 p-8">
+    <div class="min-h-screen flex flex-col bg-custombg1 text-xl p-8">
         <div class="max-w-2xl mx-auto w-full">
             <header class="mb-10">
                 <h1 class="text-3xl font-light mb-2">Settings</h1>
-                <p class="text-gray-400">Customize your experience</p>
+                <p class="text-xl-400">Customize your experience</p>
             </header>
 
             <div class="space-y-8">
                 <!-- Night Light Mode -->
-                <div class="p-4 bg-gray-800 rounded-lg">
+                <div class="p-4 bg-custombg2 rounded-lg">
                     <div class="flex items-center justify-between mb-4">
                         <div>
                             <h2 class="text-xl text-left font-light">Night Light Mode</h2>
-                            <p class="text-sm text-gray-400 mt-1">Reduce blue light emission</p>
+                            <p class="text-sm text-xl-400 mt-1">Reduce blue light emission</p>
                         </div>
                         <div
                             class="relative inline-block w-12 h-6 transition duration-200 ease-in-out"
@@ -26,7 +26,7 @@
                             />
                             <label
                                 for="night-light-toggle"
-                                class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-600 rounded-full transition-all duration-300"
+                                class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-custombg4 rounded-full transition-all duration-300"
                                 :class="{ '!bg-blue-500': nightLightMode }"
                             >
                                 <span
@@ -39,12 +39,12 @@
 
                     <div class="mt-4 space-y-4" v-if="nightLightMode">
                         <div>
-                            <p class="text-sm text-gray-400 mb-2">
+                            <p class="text-sm text-xl-400 mb-2">
                                 Location for automatic activation
                             </p>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
-                                    <label for="latitude" class="text-sm text-gray-400 block mb-1"
+                                    <label for="latitude" class="text-sm text-xl-400 block mb-1"
                                         >Latitude</label
                                     >
                                     <input
@@ -54,11 +54,11 @@
                                         @change="saveSettings"
                                         placeholder="e.g. 37.7749"
                                         step="0.0001"
-                                        class="w-full px-3 py-2 bg-gray-700 rounded"
+                                        class="w-full px-3 py-2 bg-custombg3 rounded"
                                     />
                                 </div>
                                 <div>
-                                    <label for="longitude" class="text-sm text-gray-400 block mb-1"
+                                    <label for="longitude" class="text-sm text-xl-400 block mb-1"
                                         >Longitude</label
                                     >
                                     <input
@@ -68,17 +68,17 @@
                                         @change="saveSettings"
                                         placeholder="e.g. -122.4194"
                                         step="0.0001"
-                                        class="w-full px-3 py-2 bg-gray-700 rounded"
+                                        class="w-full px-3 py-2 bg-custombg3 rounded"
                                     />
                                 </div>
                             </div>
-                            <p class="text-xs text-gray-500 mt-2">
+                            <p class="text-xs text-xl-500 mt-2">
                                 Night mode will activate automatically at sunset based on your
                                 location
                             </p>
                             <button
                                 @click="detectLocation"
-                                class="mt-3 px-4 py-2 !bg-gray-700 hover:bg-gray-600 rounded text-sm flex items-center space-x-2"
+                                class="mt-3 px-4 py-2 !bg-custombg3 hover:bg-custombg4 rounded text-sm flex items-center space-x-2"
                             >
                                 <MapPinIcon size="14" />
                                 <span>Detect my location</span>
@@ -86,10 +86,10 @@
                         </div>
 
                         <div>
-                            <p class="text-sm text-gray-400 mb-2">Color Temperature Settings</p>
+                            <p class="text-sm text-xl-400 mb-2">Color Temperature Settings</p>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
-                                    <label for="highTemp" class="text-sm text-gray-400 block mb-1"
+                                    <label for="highTemp" class="text-sm text-xl-400 block mb-1"
                                         >High Temperature (K)</label
                                     >
                                     <div class="flex items-center">
@@ -101,13 +101,13 @@
                                             min="5000"
                                             max="10000"
                                             step="100"
-                                            class="w-full px-3 py-2 bg-gray-700 rounded"
+                                            class="w-full px-3 py-2 bg-custombg3 rounded"
                                         />
                                     </div>
-                                    <p class="text-xs text-gray-500 mt-1">Daytime (5000-10000K)</p>
+                                    <p class="text-xs text-xl-500 mt-1">Daytime (5000-10000K)</p>
                                 </div>
                                 <div>
-                                    <label for="lowTemp" class="text-sm text-gray-400 block mb-1"
+                                    <label for="lowTemp" class="text-sm text-xl-400 block mb-1"
                                         >Low Temperature (K)</label
                                     >
                                     <div class="flex items-center">
@@ -119,10 +119,10 @@
                                             min="1000"
                                             max="5000"
                                             step="100"
-                                            class="w-full px-3 py-2 bg-gray-700 rounded"
+                                            class="w-full px-3 py-2 bg-custombg3 rounded"
                                         />
                                     </div>
-                                    <p class="text-xs text-gray-500 mt-1">Nighttime (1000-5000K)</p>
+                                    <p class="text-xs text-xl-500 mt-1">Nighttime (1000-5000K)</p>
                                 </div>
                             </div>
                             <div class="flex items-center mt-3">
@@ -147,11 +147,11 @@
                 </div>
 
                 <!-- Zoom Setting -->
-                <div class="p-4 bg-gray-800 rounded-lg">
+                <div class="p-4 bg-custombg2 rounded-lg">
                     <div class="flex items-center justify-between mb-4">
                         <div>
                             <h2 class="text-xl text-left font-light">Zoom</h2>
-                            <p class="text-sm text-gray-400 mt-1">Adjust display size (10-400%)</p>
+                            <p class="text-sm text-xl-400 mt-1">Adjust display size (10-400%)</p>
                         </div>
                         <div class="text-xl font-light">{{ zoom }}%</div>
                     </div>
@@ -159,7 +159,7 @@
                     <div class="flex items-center space-x-4">
                         <button
                             @click="decrementZoom"
-                            class="w-10 h-10 flex items-center justify-center hover:!bg-gray-600 !bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
+                            class="w-10 h-10 flex items-center justify-center hover:!bg-custombg4 !bg-custombg3 rounded-full hover:bg-custombg4 transition-colors"
                             :disabled="zoom <= 10"
                         >
                             <MinusIcon size="18" :class="{ 'opacity-50': zoom <= 10 }" />
@@ -173,13 +173,13 @@
                                 step="10"
                                 v-model.number="zoom"
                                 @change="saveSettings"
-                                class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                                class="w-full h-2 bg-custombg3 rounded-lg appearance-none cursor-pointer"
                             />
                         </div>
 
                         <button
                             @click="incrementZoom"
-                            class="w-10 h-10 flex items-center justify-center hover:!bg-gray-600 !bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
+                            class="w-10 h-10 flex items-center justify-center hover:!bg-custombg4 !bg-custombg3 rounded-full hover:bg-custombg4 transition-colors"
                             :disabled="zoom >= 400"
                         >
                             <PlusIcon size="18" :class="{ 'opacity-50': zoom >= 400 }" />
@@ -193,7 +193,7 @@
                                 step="10"
                                 v-model.number="zoom"
                                 @change="validateAndSaveZoom"
-                                class="w-full px-3 py-2 bg-gray-700 rounded text-center"
+                                class="w-full px-3 py-2 bg-custombg3 rounded text-center"
                             />
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                 <!-- Back Button -->
                 <button
                     @click="goBack"
-                    class="mt-8 px-6 py-3 !bg-gray-800 hover:!bg-gray-700 hover:bg-gray-700 rounded-lg transition-colors flex items-center space-x-2"
+                    class="mt-8 px-6 py-3 !bg-custombg2 hover:!bg-custombg3 hover:bg-custombg3 rounded-lg transition-colors flex items-center space-x-2"
                 >
                     <ArrowLeftIcon size="18" />
                     <span>Back</span>

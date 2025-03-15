@@ -1,6 +1,6 @@
 <template>
     <div
-        class="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-gray-100 p-4"
+        class="min-h-screen flex flex-col items-center justify-center bg-custombg1 text-xl-100 p-4"
         tabindex="0"
         @click="router.push('/login')"
         @keydown="handleKeydown"
@@ -13,9 +13,9 @@
             <div class="mt-16 opacity-70 text-sm flex items-center space-x-2 justify-center">
                 <MousePointerClickIcon size="16" />
                 <span>or press</span>
-                <kbd class="px-2 py-1 bg-gray-800 rounded text-xs">Space</kbd>
+                <kbd class="px-2 py-1 bg-custombg2 rounded text-xs">Space</kbd>
                 <span>/</span>
-                <kbd class="px-2 py-1 bg-gray-800 rounded text-xs">Enter</kbd>
+                <kbd class="px-2 py-1 bg-custombg2 rounded text-xs">Enter</kbd>
                 <span>to continue</span>
             </div>
         </div>
@@ -23,7 +23,7 @@
         <div class="fixed bottom-4 right-4">
             <button
                 @click="openSettings"
-                class="!bg-transparent text-gray-300 hover:text-white focus:outline-none transition-colors"
+                class="!bg-transparent text-xl-300 hover:text-white focus:outline-none transition-colors"
             >
                 <SettingsIcon size="24" />
             </button>
